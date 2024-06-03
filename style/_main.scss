@@ -1,0 +1,251 @@
+main {
+  .backblack {
+    background-color: rgb(27, 30, 34);
+  }
+  .backnumber {
+    background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)),
+      url(../pics/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .blog {
+    background-color: rgb(27, 30, 34);
+  }
+  .container {
+    h2 {
+      margin-bottom: 45px;
+    }
+    .actualways {
+      @include flex;
+      align-content: space-between;
+      flex-wrap: wrap;
+      height: 890px;
+      margin-bottom: 48px;
+      .pic1,
+      .pic2,
+      .pic3,
+      .pic4,
+      .pic5,
+      .pic6 {
+        @extend %pic;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: $main_text_font;
+        @include flex(flex, row, flex-start);
+        padding-top: 160px;
+        :first-child {
+          background-color: rgb(255, 184, 0);
+          @include flex(flex, row, space-around);
+          align-items: center;
+          width: 78px;
+          height: 32px;
+          :first-child {
+            font-size: 13px;
+            font-weight: 500;
+          }
+          :last-child {
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+        .date {
+          background-color: black;
+          opacity: 0.5;
+          width: 170px;
+          height: 32px;
+          font-size: 13px;
+          font-weight: 500;
+          color: rgb(255, 255, 255);
+          @include flex(flex, row, center);
+          align-items: center;
+        }
+      }
+      .pic1 {
+        background-image: url(../pics/travel_6.png);
+      }
+      .pic2 {
+        background-image: url(../pics/travel_1.png);
+      }
+      .pic3 {
+        background-image: url(../pics/travel_3.png);
+      }
+      .pic4 {
+        background-image: url(../pics/travel_5.png);
+      }
+      .pic5 {
+        background-image: url(../pics/travel_0.png);
+      }
+      .pic6 {
+        background-image: url(../pics/travel_4.png);
+      }
+      div {
+        width: 362px;
+      }
+      .dark {
+        height: 216px;
+        padding: 16px 20px 14px;
+        background-color: rgb(35, 40, 47);
+        @include flex(flex, column, space-between);
+        h3 {
+          margin-bottom: 17px;
+          height: 48px;
+        }
+        p {
+          @extend %p_style;
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 17px;
+          height: 80px;
+        }
+        a {
+          @extend %main_links;
+        }
+      }
+    }
+    .actualways > div:hover {
+      cursor: pointer;
+      transform: scale3d(1.07, 1.07, 1.07);
+      h3 {
+        @include h3_style("Montserrat", rgb(51, 51, 51), 500, 24px, 20px);
+      }
+      p {
+        color: rgb(51, 51, 51);
+      }
+      a {
+        color: rgb(0, 0, 0);
+      }
+      .dark {
+        background-color: rgb(255, 255, 255);
+      }
+    }
+    .button {
+      @include flex(flex, row, center);
+      button {
+        border: rgb(255, 184, 0) solid 1px;
+        background-color: rgb(27, 30, 34);
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        padding: 10px 30px;
+        margin-bottom: 72px;
+        width: 216px;
+      }
+      :hover {
+        cursor: pointer;
+        border: rgb(255, 184, 0) solid 1px;
+        background-color: rgb(255, 184, 0);
+        color: rgb(0, 0, 0);
+      }
+    }
+    .number {
+      padding-top: 59px;
+      @include flex;
+      div {
+        width: 264px;
+        margin-bottom: 68px;
+        font-family: $main_text_font;
+        text-align: center;
+        span {
+          display: inline-block;
+          font-size: 78px;
+          font-weight: 500;
+          line-height: 58px;
+          text-align: center;
+          color: rgb(255, 184, 0);
+          margin-bottom: 23px;
+        }
+      }
+    }
+    .ourblog {
+      padding-top: 62px;
+      margin-bottom: 44px;
+    }
+    .blogs {
+      @include flex;
+      margin: 0 auto;
+      margin-bottom: 48px;
+      span {
+        display: inline-block;
+        font-family: $date_font;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+      .first {
+        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url(../pics/lake.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-basis: 552px;
+        height: 480px;
+        h2 {
+          padding-top: 51px;
+          width: 521px;
+          margin-bottom: 28px;
+          margin-left: 16px;
+        }
+        span {
+          margin-left: 219px;
+          margin-bottom: 266px;
+        }
+      }
+      .second {
+        flex-basis: 264px;
+        .paragraf {
+          padding: 20px 20px;
+          height: 264px;
+          background-color: rgb(35, 40, 47);
+          @include flex(flex, column, space-between);
+          h3 {
+            width: 224px;
+            margin-bottom: 14px;
+          }
+          p {
+            width: 224px;
+            @extend %p_style;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          .likes {
+            opacity: 50%;
+          }
+        }
+      }
+    }
+    .review {
+      h2 {
+        margin-bottom: 47px;
+      }
+      .ellipse {
+        display: block;
+        width: 96px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+      p {
+        @extend %p_style;
+        font-size: 24px;
+        width: 924px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+      span {
+        font-family: $date_font;
+        width: 56px;
+        display: block;
+        color: rgb(255, 184, 0);
+        font-weight: 600;
+        line-height: 16px;
+        font-size: 16px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+      }
+      .dots {
+        display: block;
+        width: 48px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

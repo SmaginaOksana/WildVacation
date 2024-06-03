@@ -1,0 +1,43 @@
+footer {
+  background-color: rgb(27, 30, 34);
+  padding-top: 62px;
+  font-weight: 400;
+  line-height: 16px;
+  font-size: 13px;
+}
+.footer {
+  @include flex;
+  height: 76px;
+  margin-left: 63px;
+  margin-right: 44px;
+
+  .foot1 {
+    @include flex(flex, column, space-between);
+    flex-basis: 40%;
+    margin-bottom: 28px;
+  }
+  .foot2 {
+    @include flex(flex, row, flex-start);
+    flex-basis: 30%;
+    margin-bottom: 28px;
+  }
+  .foot3 {
+    @include flex(flex, column, space-between);
+    flex-basis: 25%;
+    margin-bottom: 28px;
+    img {
+      margin-right: 24px;
+    }
+  }
+  .call {
+    @include flex(flex, column, space-between);
+  }
+  span {
+    font-family: $date_font;
+    margin-right: 26px;
+    color: rgb(255, 184, 0);
+  }
+  p {
+    display: inline-block;
+  }
+}

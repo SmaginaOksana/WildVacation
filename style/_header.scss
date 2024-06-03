@@ -1,0 +1,162 @@
+header {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(27, 30, 34, 0.4),
+      rgba(27, 30, 34, 1)
+    ),
+    url(../pics/travel_7.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    position: relative;
+    a {
+      font-family: $main_text_font;
+      color: $main_text_color;
+      text-decoration: none;
+    }
+    .top {
+      @include flex;
+      align-items: center;
+      padding-top: 33px;
+      padding-left: 5px;
+      margin-bottom: 152px;
+      .logo {
+        display: inline-block;
+        width: 183px;
+        height: 50px;
+        margin-right: 33px;
+      }
+      .lang {
+        margin-right: 179px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 16px;
+        a {
+          margin-right: 21px;
+        }
+        :last-child {
+          margin-right: 0;
+        }
+        :hover {
+          cursor: pointer;
+          color: rgba(196, 196, 196, 0.5);
+        }
+      }
+      nav {
+        @include flex;
+        align-items: center;
+        width: 657px;
+        a {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 32px;
+          padding-right: 40px;
+        }
+        :nth-child(5) {
+          padding-right: 35px;
+        }
+        :last-child {
+          padding: 8px 32px;
+        }
+        :last-child:hover {
+          cursor: pointer;
+          border: rgb(255, 184, 0) solid 1px;
+          border-radius: 10px;
+        }
+      }
+      .burger {
+        display: none;
+      }
+    }
+    h1 {
+      width: 582px;
+      margin-bottom: 26px;
+    }
+    p {
+      padding-left: 4px;
+      width: 474px;
+      margin-bottom: 277px;
+    }
+    form {
+      backdrop-filter: blur(24px);
+      border-radius: 10px;
+      width: 500px;
+      padding: 50px 70px 55px;
+      position: absolute;
+      top: 165px;
+      right: 87px;
+      h3 {
+        margin-bottom: 23px;
+      }
+      input,
+      select {
+        flex-basis: 100%;
+        background-color: transparent;
+        border: rgb(255, 255, 255) 1px solid;
+        border-radius: 4px;
+        padding: 5px;
+        color: rgb(255, 255, 255);
+        font-family: $main_text_font;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16px;
+        height: 36px;
+      }
+      .flex {
+        @include flex;
+        flex-wrap: wrap;
+        gap: 21px;
+        .when,
+        .number {
+          flex-basis: 47%;
+        }
+        .where {
+          background: url(../pics/find.png) no-repeat right/15px transparent;
+        }
+        ::placeholder {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 16px;
+          color: rgb(255, 255, 255);
+        }
+        :focus {
+          outline: none;
+          color: rgb(255, 255, 255);
+        }
+        :focus::placeholder {
+          opacity: 0;
+        }
+        select {
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          background: url(../pics/point.png) no-repeat right/15px transparent;
+        }
+        .button {
+          background-color: rgb(255, 184, 0);
+          border: rgb(255, 184, 0);
+          @extend %main_links;
+          color: rgb(51, 51, 51);
+        }
+      }
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .why {
+      @include flex;
+      > div {
+        width: 264px;
+        margin-bottom: 59px;
+        text-align: center;
+        padding-top: 24px;
+        img {
+          margin: 0 auto;
+          margin-bottom: 17px;
+        }
+      }
+    }
+  }
+}
